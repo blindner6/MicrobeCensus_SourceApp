@@ -9,9 +9,3 @@ https://github.com/snayfach/MicrobeCensus
 And the context of its deployment in SourceApp:
 
 https://github.com/blindner6/SourceApp
-
-### Citing
-If you use MicrobeCensus, please cite:  
-
-Nayfach, S. and Pollard, K.S. Average genome size estimation improves comparative metagenomics and sheds light on the functional ecology of the human microbiome. _Genome biology 2015;**16**(1):51_.
-
