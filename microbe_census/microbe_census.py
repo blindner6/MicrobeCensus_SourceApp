@@ -137,6 +137,13 @@ def check_rapsearch(rapsearch):
     process = subprocess.Popen(rapsearch + ' -h', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     retcode = process.wait()
     output, error = process.communicate()
+
+   #Python version issue with subprocess communicate creates str or bytes depending on version. Str is reequired here
+   #Implemented for sourceapp deployment
+   if isinstance(error, bytes):
+         output = output.decode(encoding="ascii")
+         error = error.decode(encoding="ascii")
+      
     if os.path.isdir(rapsearch):
         sys.exit("Problem executing rapsearch2: '%s'" % rapsearch)
     elif len(error.decode().split('\n')) < 2:
