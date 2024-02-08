@@ -14,7 +14,7 @@ class my_install_lib(install_lib.install_lib):
 				os.chmod(fn, mode)
 
 setup(
-	name = 'MicrobeCensus',
+	name = 'MicrobeCensus_SourceApp',
 	version = '1.1.0',
 	description = 'Estimation of average genome size from metagenomic data',
 	packages = ['microbe_census', 'tests'],
